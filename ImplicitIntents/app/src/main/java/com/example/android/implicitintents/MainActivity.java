@@ -21,6 +21,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.core.app.ShareCompat;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -118,5 +120,14 @@ public class MainActivity extends AppCompatActivity {
                 .setChooserTitle(R.string.share_text_with)
                 .setText(txt)
                 .startChooser();
+    }
+
+    public void take_picture(View view) {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!");
+        }
     }
 }
