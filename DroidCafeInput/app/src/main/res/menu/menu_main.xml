@@ -19,6 +19,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.droidcafeinput.MainActivity">
     <item
+        android:icon="@drawable/ic_shopping_cart"
+        android:id="@+id/action_order"
+        android:orderInCategory="100"
+        android:title="@string/action_order"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_Status"
+        android:icon="@drawable/status"
+        android:orderInCategory="100"
+        android:title="@string/action_Status"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_Favoris"
+        android:icon="@drawable/favorite"
+        android:orderInCategory="100"
+        android:title="@string/action_Favoris"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_contanct"
+        android:orderInCategory="100"
+        android:title="@string/action_contanct"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"

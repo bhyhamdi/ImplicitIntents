@@ -96,10 +96,22 @@ public class MainActivity extends AppCompatActivity {
         // This comment suppresses the Android Studio warning about simplifying
         // the return statements.
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_order:
+                displayToast(getString(R.string.action_order));
+                return true;
+            case R.id.action_Status:
+                displayToast(getString(R.string.action_Status));
+                return true;
+            case R.id.action_Favoris:
+                displayToast(getString(R.string.action_Favoris));
+                return true;
+            case R.id.action_contanct:
+                displayToast(getString(R.string.action_contanct));
+                return true;
+            default:
+                // Do nothing
         }
-
         return super.onOptionsItemSelected(item);
     }
 
